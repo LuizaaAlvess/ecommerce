@@ -4,7 +4,7 @@ import { colors } from "../util/Colors";
 
 export class ProdutoController implements ProdutoRepository {
 
-    private listaProdutos: Array<Produto> = new Array<Produto>();
+    public listaProdutos: Array<Produto> = new Array<Produto>();
     numero: number = 0; 
 
     procurarPorId(id: number): void {
@@ -18,8 +18,8 @@ export class ProdutoController implements ProdutoRepository {
     }
 
     listarTodos(): void {
-        for (let Produto of this.listaProdutos){
-            Produto.visualizar()
+        for (let produto of this.listaProdutos){
+            produto.visualizar()
         }
     }
     cadastrar(produto: Produto): void {
@@ -32,7 +32,7 @@ export class ProdutoController implements ProdutoRepository {
 
         if (buscaProduto != null) {
             this.listaProdutos[this.listaProdutos.indexOf(buscaProduto)] = produto;
-            console.log(colors.fg.green, "\nA Produto: " + produto.toString() +
+            console.log(colors.fg.green, "\nA Produto: " + produto.visualizar() +
             "foi atualizado com sucesso!", colors.reset);
         } else
             console.log(colors.fg.red, "\nA Produto: " + produto.nome +

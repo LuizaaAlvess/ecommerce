@@ -1,4 +1,7 @@
 export class Produto {
+    static listaProdutos() {
+        throw new Error("Method not implemented.");
+    }
 
     private _preco: number;
     private _nome: string;
@@ -44,14 +47,14 @@ export class Produto {
         this._id = id;
     }
 
-    public visualizar() {
+    public visualizar(): void {
         console.log("\n\n*****************************************************");
         console.log("Produto");
         console.log("*****************************************************");
-        console.log("\nNome: " + this._nome);
-        console.log("\nPreço: " + this._preco);
-        console.log("\nQuantidade: " + this._quantidade);
-        console.log("\nID: " + this._id);
+        console.log("Nome: " + this._nome);
+        console.log("Preço: " + this._preco);
+        console.log("Quantidade: " + this._quantidade);
+        console.log("ID: " + this._id);
     }
 
 }
