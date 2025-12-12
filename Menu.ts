@@ -7,8 +7,7 @@ export function main() {
 
     while (true) {
 
-        console.log(colors.bg.black, colors.fg.magenta,
-                    "*****************************************");
+        console.log(colors.bg.black, colors.fg.magenta,);
 
         console.log("********************************************");
         console.log("                                            ");
